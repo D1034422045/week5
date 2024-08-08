@@ -1,0 +1,18 @@
+.right-block {
+  width: calc(100% - 296px);
+}
+
+.z-index-5 {
+  z-index: 5;
+}
+
+.collapse-icons .material-symbols-outlined {
+  width: 24px;
+  height: 24px;
+}
+
+.collapse-textarea {
+  &::placeholder {
+    color: $secondary;
+  }
+}

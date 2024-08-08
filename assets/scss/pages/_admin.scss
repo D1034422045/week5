@@ -1,0 +1,13 @@
+.header-add-admin {
+  &:hover {
+    color: $success;
+  }
+}
+
+.tbody {
+  .material-symbols-outlined {
+    &:hover {
+      color: $success;
+    }
+  }
+}

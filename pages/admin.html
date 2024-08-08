@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>管理</title>
+  </head>
+  <body>
+    <div class="d-flex">
+      <%- include('./layout/header',{page: "admin"}); -%>
+      <section
+        class="right-block ms-auto p-8 d-flex flex-column"
+        style="height: 100vh"
+      >
+        <header class="d-flex align-items-center mb-4">
+          <h2 class="fw-bold fs-6 me-12">Admin</h2>
+
+          <a
+            href="#"
+            class="fw-bold header-add-admin"
+            data-bs-toggle="modal"
+            data-bs-target="#new-Modal"
+            ><span class="material-symbols-outlined text-success me-2">
+              add </span
+            >Add New Admin</a
+          >
+
+          <div class="ms-auto">
+            <span class="material-symbols-outlined me-6"> search </span>
+            <span class="material-symbols-outlined">
+              notifications_active
+            </span>
+          </div>
+        </header>
+        <main>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">
+                  ID<span class="material-symbols-outlined ms-2 text-success">
+                    arrow_downward
+                  </span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr>
+                <th scope="row" class="fw-normal">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#view-Modal"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#edit-Modal"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td class="d-flex justify-content-between align-items-center">
+                  Yes
+                  <div class="d-flex align-items-center">
+                    <a href="#"
+                      ><span class="material-symbols-outlined">
+                        visibility
+                      </span></a
+                    >
+                    <a href="#"
+                      ><span class="material-symbols-outlined ms-6">
+                        edit
+                      </span></a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="modal fade"
+            id="edit-Modal"
+            tabindex="-1"
+            aria-labelledby="edit-ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold fs-6" id="edit-ModalLabel">
+                    Edit Admin
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h3 class="fs-5 fw-bold mb-4">Account</h3>
+                  <div class="mb-4">
+                    <label for="edit-FormControlInput1" class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      readonly
+                      id="edit-FormControlInput1"
+                      value="Emir Wicks"
+                    />
+                  </div>
+                  <div class="mb-6">
+                    <label for="edit-FormControlInput2" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      readonly
+                      id="edit-FormControlInput2"
+                      value="emir.wicks@mail.com"
+                    />
+                  </div>
+
+                  <div class="py-6 border-top border-bottom border-1">
+                    <h3 class="fs-5 fw-bold mb-4">Verification</h3>
+                    <div class="d-flex mb-4">
+                      <span class="material-symbols-outlined me-2">
+                        check_circle
+                      </span>
+                      <p class="fw-bold">Verified</p>
+                      <p class="ms-auto">2020/4/12</p>
+                    </div>
+                    <input
+                      class="form-control text-center"
+                      type="text"
+                      placeholder="Send Verification Mail"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="border-bottom border-1 py-6">
+                    <h3 class="fw-bold fs-5 mb-4">Access Level</h3>
+                    <select
+                      class="form-select border-dark"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Admin</option>
+                    </select>
+                  </div>
+
+                  <div class="py-6 border-bottom border-1">
+                    <h3 class="fw-bold fs-5 mb-4">Custom Access</h3>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="Lecture"
+                      />
+                      <label class="form-check-label" for="Lecture">
+                        Lecture
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="Coupon"
+                      />
+                      <label class="form-check-label" for="Coupon">
+                        Coupon
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="Message"
+                      />
+                      <label class="form-check-label" for="Message">
+                        Message
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="Setting"
+                      />
+                      <label class="form-check-label" for="Setting">
+                        Setting
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="Task Menu"
+                      />
+                      <label class="form-check-label" for="Task Menu">
+                        Task Menu
+                      </label>
+                    </div>
+                  </div>
+                  <div class="py-6">
+                    <h3 class="fw-bold fs-5 mb-4">Deactivate Account</h3>
+                    <div class="d-flex mb-5">
+                      <span class="material-symbols-outlined text-danger me-2">
+                        warning
+                      </span>
+                      <p class="text-danger">This cannot be undone!</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger w-100 text-center"
+                    >
+                      Deactivate This Account
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-outline-success rounded-1"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-success rounded-1"
+                  >
+                    Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="view-Modal"
+            tabindex="-1"
+            aria-labelledby="view-ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <img
+                        src="../assets/images/emir.jpeg"
+                        alt="emir"
+                        style="width: 140px; height: 160px"
+                        class="object-fit-cover"
+                      />
+                    </div>
+                    <div class="ps-6" style="width: calc(100% - 140px)">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p>#1</p>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="mb-5">
+                        <p>Admin</p>
+                        <p class="fs-6 fw-bold">Emir Wicks</p>
+                        <a href="mailto:emir.wicks@mail.com"
+                          >emir.wicks@mail.com</a
+                        >
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <p>Verified</p>
+                        <a
+                          href="#"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#view-collapse"
+                          aria-expanded="false"
+                          aria-controls="view-collapse"
+                          ><span class="material-symbols-outlined text-success">
+                            keyboard_arrow_down
+                          </span></a
+                        >
+                      </div>
+                      <div class="collapse pt-8" id="view-collapse">
+                        <div class="d-flex justify-content-between">
+                          <button
+                            type="button"
+                            class="btn btn-lg btn-outline-danger rounded-1"
+                          >
+                            Deactivate
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-lg btn-success rounded-1"
+                          >
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="new-Modal"
+            tabindex="-1"
+            aria-labelledby="new-ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold fs-6" id="new-ModalLabel">
+                    New Admin
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h3 class="fs-5 fw-bold mb-4">Account</h3>
+                  <div class="mb-4">
+                    <label for="new-FormControlInput1" class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="new-FormControlInput1"
+                    />
+                  </div>
+                  <div class="mb-6">
+                    <label for="new-FormControlInput2" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="new-FormControlInput2"
+                    />
+                  </div>
+
+                  <div class="py-6 border-top border-bottom border-1">
+                    <h3 class="fs-5 fw-bold mb-4">Verification</h3>
+                    <div class="d-flex mb-5">
+                      <span class="material-symbols-outlined text-danger me-2">
+                        warning
+                      </span>
+                      <p class="text-dark">Unverified</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn border text-center text-success w-100 fw-bold"
+                    >
+                      Send Verification Mail
+                    </button>
+                  </div>
+
+                  <div class="border-bottom border-1 py-6">
+                    <h3 class="fw-bold fs-5 mb-4">Access Level</h3>
+                    <select
+                      class="form-select border-dark text-secondary rounded-2"
+                      aria-label="Default select example"
+                    >
+                      <option selected>-Choose access level-</option>
+                    </select>
+                  </div>
+
+                  <div class="py-6">
+                    <h3 class="fw-bold fs-5 mb-4">Custom Access</h3>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="new-Lecture"
+                      />
+                      <label class="form-check-label" for="new-Lecture">
+                        Lecture
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="new-Coupon"
+                      />
+                      <label class="form-check-label" for="new-Coupon">
+                        Coupon
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="new-Message"
+                      />
+                      <label class="form-check-label" for="new-Message">
+                        Message
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="new-Setting"
+                      />
+                      <label class="form-check-label" for="new-Setting">
+                        Setting
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="new-Task Menu"
+                      />
+                      <label class="form-check-label" for="new-Task Menu">
+                        Task Menu
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-outline-success rounded-1"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-success rounded-1"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="d-flex mt-auto ms-auto">
+          <a
+            href="#"
+            class="btn btn-outline-success rounded-0 px-0"
+            style="width: 32px"
+            ><span class="material-symbols-outlined text-success">
+              chevron_left
+            </span></a
+          >
+          <a href="#" class="btn btn-success rounded-0 px-0" style="width: 32px"
+            >1</a
+          >
+          <a
+            href="#"
+            class="btn btn-outline-success rounded-0 px-0"
+            style="width: 32px"
+            >2</a
+          >
+          <a
+            href="#"
+            class="btn btn-outline-success rounded-0 px-0"
+            style="width: 32px"
+            >3</a
+          >
+          <a
+            href="#"
+            class="btn btn-outline-success rounded-0 px-0"
+            style="width: 32px"
+            ><span
+              class="material-symbols-outlined text-success px-0"
+              style="width: 32px"
+            >
+              chevron_right
+            </span></a
+          >
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
